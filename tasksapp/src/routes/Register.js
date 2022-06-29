@@ -8,6 +8,8 @@ const Register = () => {
   const [isSubmit,setIsSubmit] = useState(false);
   const [tempData,setTempData] = useState(formValues);
 
+  const [db,setDb] = useState([]);
+
   const changeHandler = (e) =>{
     const {name,value} = e.target;
     setFormValues({...formValues,[name]:value});
@@ -17,15 +19,26 @@ const Register = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    
   }
 
   useEffect(()=>{
     console.log(formErrors);
     if(Object.keys(formErrors).length === 0 && isSubmit){
       console.log(formValues); 
+
       setTempData(formValues);
+      const data = [...db];
+      data.push(formValues);
+      setDb(data);
+
       alert('register successfull');
     }
+    setFormValues({
+      firstName : "",
+      lastName : "",
+      email: ""
+    });
   },[formErrors]);
 
   const validate = (values) =>{
@@ -109,16 +122,16 @@ const Register = () => {
               </div>
             </form>
             </div>
-            <div>
-               {(Object.keys(formErrors).length === 0 && isSubmit)?
-                <div className='row card mt-4 mb-5 card-body'>
-                   <h6>Details :</h6>
-                        First Name : {tempData.firstName} <br/>
-                        Last Name : {tempData.lastName} <br/>
-                        Email : {tempData.email}
-                </div> 
-                : " "
-               }
+            <div className='mt-4'>
+               {db.map((item,index)=>{
+                    return(
+                      <div className='row card mt-2 mb-2 card-body' key={index}>
+                         FirstName : {item.firstName} <br/>
+                         LastName : {item.lastName} <br/>
+                         Email : {item.email} <br/>
+                      </div>
+                    
+                )})}
             </div>
             
         </div>
