@@ -19,7 +19,7 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/responsenavbar' element={<ResponseNavbar/>}/>
           <Route path='/home' element={<ResponseNavbar/>}/>
-          <Route path='/products' element={<Products/>}/>
+          <Route path='/responsenavbar/products' element={<Products/>}/>
           <Route path='/services' element={<Services/>}/>
           <Route path='/dashboard' element={<DashBoard/>}/>
           <Route path='/aboutus' element={<AboutUs/>}/>
