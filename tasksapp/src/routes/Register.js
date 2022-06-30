@@ -6,7 +6,6 @@ const Register = () => {
   const [formValues,setFormValues] = useState(new User());
   const [formErrors,setFormErrors] = useState({});
   const [isSubmit,setIsSubmit] = useState(false);
-  const [tempData,setTempData] = useState(formValues);
 
   const [db,setDb] = useState([]);
 
@@ -27,7 +26,6 @@ const Register = () => {
     if(Object.keys(formErrors).length === 0 && isSubmit){
       console.log(formValues); 
 
-      setTempData(formValues);
       const data = [...db];
       data.push(formValues);
       setDb(data);
@@ -68,16 +66,16 @@ const Register = () => {
 
 
   return (
-    <div className='container-fluid bg-light pb-5 p-5 '>
-      <h1 className='display-4 p-5 App'> Task : Registration form</h1>
+    <div className='container-fluid App' style={{"backgroundColor":"rgba(5, 55, 77, 0.693)"}}>
+      <h1 className='display-4 p-5 text-center text-white'> Task : Registration form</h1>
       
       <div className='row pb-5'>
-        <div className='col-sm-10 col-md-5 offset-md-3 col-lg-4 offset-md-4'>
+        <div className='col-sm-10 col-md-4 offset-md-4 col-lg-4 offset-md-4'>
         <div>
             <form onSubmit={submitHandler} className="row card pt-3 pb-3 " >
             <div>
               {Object.keys(formErrors).length === 0 && isSubmit ? (
-                  <div id="suces" className="card text-success bg-light col-md-6 col-lg-6 mt-4 offset-3 App"> 
+                  <div id="suces" className="card text-success bg-light col-md-6 col-lg-6 mt-4 offset-3 text-center"> 
                     <b>Register successful</b></div>
                   ) : ( " "
               )}
