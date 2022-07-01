@@ -40,4 +40,11 @@
   margin: 30px;
 }
 
+#searchsize{
+  padding: 7px 0px 7px 25px;
+}
 
+#card-body{
+  height: 570px;
+  overflow-y: scroll;
+}

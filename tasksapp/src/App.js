@@ -9,6 +9,7 @@ import Services from './components/Services';
 import DashBoard from './components/DashBoard';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
+import SearchKeys from './routes/SearchKeys';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/dashboard' element={<DashBoard/>}/>
           <Route path='/aboutus' element={<AboutUs/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route path='/searchkeys' element={<SearchKeys/>}/>
         </Routes>
       </Router>
     </div>

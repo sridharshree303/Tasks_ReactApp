@@ -22,7 +22,7 @@ const Products = () => {
         </div>
         <div>
         <div className='pt-2 text-center'>
-            <Link to="/" ><button type="button" className="btn btn-warning btn-sm ">Main</button></Link> 
+            <Link to="/" ><button type="button" className="btn btn-warning btn-sm ">Main Page</button></Link> 
             &nbsp; &nbsp;
             <Link to="/home" ><button type="button" className="btn btn-primary btn-sm ">Home</button></Link> 
             &nbsp; &nbsp;

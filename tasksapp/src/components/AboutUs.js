@@ -25,7 +25,7 @@ const AboutUs = () => {
       <div className='pt-2 text-center'>
         <Link to="/contact" ><button type="button" className="btn btn-info btn-sm ">Contact</button></Link> 
         &nbsp; &nbsp;
-        <Link to="/" ><button type="button" className="btn btn-warning btn-sm ">Main</button></Link> 
+        <Link to="/" ><button type="button" className="btn btn-warning btn-sm ">Main Page</button></Link> 
         &nbsp; &nbsp;
         <Link to="/home" ><button type="button" className="btn btn-primary btn-sm ">Home</button></Link> 
         &nbsp; &nbsp;
